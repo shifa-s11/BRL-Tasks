@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgba(16, 22, 48, 255);
+}
+    
+
+/* Navbar */
+.header{
+    height: 60px;
+}
+.name{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+ .header::before{
+    content: "";
+   height: 60px;
+    width: 100%;
+    background-color: #0c1021;
+    position: fixed;
+    z-index: -1; 
+} 
+ .navbar{
+    display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+}
+.li ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+} 
+.li a{
+  margin: 10px;
+  color: white;
+  font-size: 1.2rem;
+  height: 40px;
+  padding: 5px 12px;
+
+}
+.li a:hover{
+    background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+border-radius: 15px;
+}
+.navbar li{
+    list-style: none;
+}
+ .navbar li a{
+    text-decoration: none;
+}
+/* hamburger menu */
+ /* .header .showicon{
+    cursor: pointer;
+    display: none;
+text-align: center;
+font-size: 18px;} 
+.header input[type="checkbox"]{
+    display: none;
+}
+@media(max-width:900px){
+    .navbar .li li label{
+        display: block;
+    }
+    header #shownav:checked~ .showicon i::before{
+        content: "\f00d";
+    }
+    .header .showicon{
+        display: block;
+    }
+    header.navbar.li{
+        display: block;
+        position: fixed;
+        background-color:rgba(16, 22, 48, 255) ;
+        left: -100;
+        top: 70px;
+        height:100% ;
+        width: 100%;
+        max-width: 350px;
+        overflow: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    .header #shownav:checked~ .navbar .li{
+        left:0%
+    }
+.navbar .li li{
+    margin:15px 20px
+}
+} */
+.header input[type="checkbox"]{
+    display: none;}
+    @media(max-width:900px){
+        .showicon{
+            cursor: pointer;
+            background-color:rgba(16, 22, 48, 255);
+            top: 15px;
+          left: 25px;
+          z-index: 1;
+          position: relative;
+          height: 30px;
+          width: 30px;
+          display: block;
+        }
+        .li{
+            position: fixed;
+            top: 0;
+            left: -350px;
+            width: 100%;
+            max-width: 350px;
+            height: 100%;
+            overflow-x: hidden;
+            transition: all 0.3s;
+        }
+        #shownav:checked ~.li ul{
+            display: block;
+        }
+        header #shownav:checked~ .showicon i::before{
+            content: "\f00d";
+       
+        }
+        .header #shownav:checked+ .navbar .li {
+            left:0%
+        }
+    }
+    /* about */
+    .home{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .head{
+        margin-left: 100px;
+        margin-top: 80px;
+      
+        
+    }
+    .head h1{
+        margin: 5px;
+        padding: 6px;
+        font-size: 3rem;
+        color: white;
+    }
+    .head span{
+        font-family: 'Lobster', cursive;
+        margin: 20px;
+        color :rgb(104, 217, 255)
+    }
+    .head h2{
+        margin-left: 50px;
+       padding: 3px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 2rem;
+    }
+    .head p{
+        font-size: 1.1rem;
+        color: white;
+        height: 100px;
+        width: 550px;
+        margin: 2rem 0 2rem;
+        padding: 15px;
+    }
+/* .button-box{
+    display: flex;
+    justify-content: space-evenly;
+   margin-top: 80px;
+   width: 30rem;
+   height: 5rem;
+    color: white;
+    letter-spacing: 1px;
+}
+    .button-box .button{
+        font-size: 1.5rem;
+        text-decoration: none;
+        position: relative;
+        display: inline-flex;
+        height: 70%;
+      width: 150px;
+background-color: rgb(104, 217, 255);
+border-radius: 30px ;
+
+    }
+    .button-box a {
+        text-align: center;
+        margin: 14px;
+       padding-left: 20px;
+    padding-top: 12.5px;
+    color: white;
+    }
+   .button-box .button::before {
+        content:" ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) ;
+
+
+    } */
+    .button-box{
+        position:relative;
+        display:flex;
+        justify-content: space-evenly;
+        width:34.5rem; 
+        height:5rem;
+        margin-top: 80px;
+        letter-spacing: 1px;
+    }
+    .button-box .button{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width:13rem;
+        height:75%;
+        background:#5393d0 ;
+        border: .2rem solid #5393d0 ;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color:white;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s ease-in;
+        overflow-x: hidden;
+    }
+    .button-box .button::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:0;
+        height:100%;
+        background-color: #21D4FD;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        z-index: -1;
+        transition: .5s ease-in;
+    }
+    .button-box a{
+        text-decoration: none;
+    }
+    .button-box .button:hover::before{
+        width: 100%;
+    }
+    .button-box .button:hover{
+        color:rgb(193, 249, 9);
+    }
+    .button-box .button:nth-child(2){
+        background-color: transparent;
+        color:#5393d0;
+
+    }
+    .button-box .button:nth-child(2):hover{
+        color:white;
+    }
+    .button-box .button:nth-child(2)::before{
+        background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+    }
+    .homeimg img{
+        height: 75%;
+        opacity: 0.6;
+        margin-left: 100px;
+       width: 600px;
+    
+    }
+    .homeimg img:hover{
+        opacity: 1;
+         transition:opacity 0.4s 
+    }
