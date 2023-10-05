@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
 }
 body{
     background-color:rgba(16, 22, 48, 255);
@@ -9,136 +10,100 @@ body{
     
 
 /* Navbar */
-.header{
+  .header{
     height: 60px;
-}
-.name{
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
- .header::before{
-    content: "";
-   height: 60px;
-    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
     background-color: #0c1021;
-    position: fixed;
-    z-index: -1; 
-    opacity: 1;
-} 
- .navbar{
-    display: flex;
-  justify-content: space-around;
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  align-items: center;
-}
-.li ul{
-    display: flex;
-    justify-content: center;
+    display:flex;
+    justify-content: space-between;
     align-items: center;
-   
-} 
-.li a{
-  margin: 10px;
-  color: white;
-  font-size: 1.2rem;
-  height: 40px;
-  padding: 5px 12px;
-
+    z-index:1;
 }
-.li a:hover{
-    background-color: #21D4FD;
-background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-border-radius: 15px;
-}
-.navbar li{
-    list-style: none;
-}
- .navbar li a{
+.logo{
+    font-size:2rem;
+    color:white;
+    font-weight: 700;
     text-decoration: none;
 }
-/* hamburger menu */
- /* .header .showicon{
-    cursor: pointer;
-    display: none;
-text-align: center;
-font-size: 18px;} 
-.header input[type="checkbox"]{
+.navbar .links{
+    display: flex;
+    justify-content: space-between;
+    margin:10px ;
+    padding: 10px;
+}
+.navbar .links li{
+    list-style-type: none;
+}
+.navbar .links li a,
+.navbar .links li label{
+    font-size: 1.3rem;
+    color:white;
+    font-weight:550;
+    margin: 20px;
+    padding: 10px;
+    font-weight: bold;
+    transition: .3s;
+    text-decoration: none;
+}
+.navbar .links li label{
+    display:none;
+}
+.navbar .links li a:hover{
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    border-radius: 20px;
+}
+header .showicon{
+    cursor:pointer;
+    text-align: center;
+    font-size: 18px;
+}
+header .showicon{
+    display:none;
+}
+header input[type="checkbox"]{
     display: none;
 }
 @media(max-width:900px){
-    .navbar .li li label{
+    .navbar .links li label{
         display: block;
     }
-    header #shownav:checked~ .showicon i::before{
-        content: "\f00d";
-    }
-    .header .showicon{
+    header .showicon{
         display: block;
     }
-    header.navbar.li{
-        display: block;
-        position: fixed;
-        background-color:rgba(16, 22, 48, 255) ;
-        left: -100;
-        top: 70px;
-        height:100% ;
-        width: 100%;
-        max-width: 350px;
+    header #showmenu:checked~ .showicon i::before{
+        content:"\f00d";
+    }
+    header .navbar .links{
+        display:block;
+        position:fixed;
+        background:rgba(16, 22, 48, 255);
+        left:-100%;
+        top:70px; 
+        height:100%;
+        width:100%;
+        max-width:350px;
         overflow: auto;
+        max-width: 350px; 
         padding-bottom: 100px;
         transition: all 0.3s ease;
     }
-    .header #shownav:checked~ .navbar .li{
-        left:0%
-    }
-.navbar .li li{
-    margin:15px 20px
+     header #showmenu:checked~ .navbar .links{
+        left:0%;
+    } 
+    .navbar .links li{
+        margin:15px 20px;
+    } 
 }
-} */
-.header .showicon{
-    cursor: pointer;
-    display: none;
-text-align: center;
-font-size: 18px;} 
-.header input[type="checkbox"]{
-    display: none;}
-    @media(max-width:900px){
-        .showicon{
-            cursor: pointer;
-            background-color:rgba(16, 22, 48, 255);
-            top: 15px;
-          left: 25px;
-          z-index: 1;
-          position: relative;
-          height: 30px;
-          width: 30px;
-          display: block;
-        }
-        .li{
-            position: fixed;
-            top: 0;
-            left: -350px;
-            width: 100%;
-            max-width: 350px;
-            height: 100%;
-            overflow-x: hidden;
-            transition: all 0.3s;
-        }
-        #shownav:checked ~.li ul{
-            display: block;
-        }
-        header #shownav:checked~ .showicon i::before{
-            content: "\f00d";
-       
-        }
-        .header #shownav:checked+ .navbar .li {
-            left:0%
-        }
-    }
+ 
     /* about */
+    header #showmenu:checked #bts{
+        visibility: hidden;
+    }
     .home{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -459,3 +424,43 @@ animation: project1 5s ease  1s infinite ;}
 .project2{
  animation: project2 5s  ease 1s infinite; 
 }
+/* contact */
+.contact h3{
+    font-size:3.5rem;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+}
+.contact form{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:2.9rem;
+}
+form input{
+    display: block;
+    width:80%;
+    height:40px;
+    border-radius: 20px;
+}
+ form .btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #21D4FD; 
+    margin: 15px;
+    cursor: pointer;
+}
+.footer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c1021;
+    gap: 30px;
+    margin: 10px;
+}
+
+
