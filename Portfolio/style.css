@@ -245,6 +245,14 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
         
     }
     /* about */
+    .about img{
+        width: 400px;
+        height: 400px;
+        transition: all 0.3s;
+    }
+    .about img:hover{
+     transform: scale(1.2);
+    }
     .about{
         margin: 20px;
         display: flex;
@@ -254,14 +262,14 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
         
     }
     .about h1{
-padding: 15px;
+
 font-size: 3rem;
 color: white;
     }
 
     .about h3{
-        padding: 10px;
-        margin: 10px;
+    
+      
         color:#21D4FD;
        font-family: cursive;
        font-size: 2.5rem;
@@ -276,6 +284,10 @@ color: white;
         margin-top: 15px;
     }
     /* Education */
+    .education h1{
+        font-size: 3rem;
+        color: white;
+    }
     .education{
         display: flex;
         flex-direction: column;
@@ -287,7 +299,6 @@ color: white;
         background-color:white ;
         height: 170px;
         width: 65%;
-        /* margin: 30px 250px; */
         display: flex;
         flex-direction: column;
       align-items: center;
@@ -303,6 +314,7 @@ color: white;
     .tenth li,.twelth li,.college li {
         font-size: 2rem;
         list-style-type: square;
+        color: #21D4FD;
     }
   
     .tenth p ,.twelth p,.college p{
@@ -315,3 +327,31 @@ color: white;
         padding: 10px;
     }
 
+/* skills */
+.ski h1{
+    font-size: 3rem;
+    color: white;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+}
+.skills  img{
+ height: 250px;
+ width: 250px;
+ transition: all 0.4s;
+
+}
+.skills{
+    display: flex;
+   justify-content: space-evenly;
+   margin: 50px 0;
+}
+    @keyframes icons {
+        25%{transform: rotate(-20deg);}
+        /* 50%{transform: rotate(0deg);} */
+        75%{transform: rotate(20deg);}
+        100%{transform: rotate(0deg);}
+    }
+  .skills img:hover{
+    animation:icons 5s ease ;
+  }
