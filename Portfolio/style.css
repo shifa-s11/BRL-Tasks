@@ -24,6 +24,7 @@ body{
     background-color: #0c1021;
     position: fixed;
     z-index: -1; 
+    opacity: 1;
 } 
  .navbar{
     display: flex;
@@ -136,6 +137,7 @@ font-size: 18px;}
     .home{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        height: 650px;
     }
     .head{
         margin-left: 100px;
@@ -169,44 +171,7 @@ font-size: 18px;}
         margin: 2rem 0 2rem;
         padding: 15px;
     }
-/* .button-box{
-    display: flex;
-    justify-content: space-evenly;
-   margin-top: 80px;
-   width: 30rem;
-   height: 5rem;
-    color: white;
-    letter-spacing: 1px;
-}
-    .button-box .button{
-        font-size: 1.5rem;
-        text-decoration: none;
-        position: relative;
-        display: inline-flex;
-        height: 70%;
-      width: 150px;
-background-color: rgb(104, 217, 255);
-border-radius: 30px ;
 
-    }
-    .button-box a {
-        text-align: center;
-        margin: 14px;
-       padding-left: 20px;
-    padding-top: 12.5px;
-    color: white;
-    }
-   .button-box .button::before {
-        content:" ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color:linear-gradient(19deg, #21D4FD 0%, #B721FF 100%) ;
-
-
-    } */
     .button-box{
         position:relative;
         display:flex;
@@ -253,9 +218,7 @@ border-radius: 30px ;
     .button-box .button:hover::before{
         width: 100%;
     }
-    .button-box .button:hover{
-        color:rgb(193, 249, 9);
-    }
+    
     .button-box .button:nth-child(2){
         background-color: transparent;
         color:#5393d0;
@@ -279,4 +242,76 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
     .homeimg img:hover{
         opacity: 1;
          transition:opacity 0.4s 
+        
     }
+    /* about */
+    .about{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .about h1{
+padding: 15px;
+font-size: 3rem;
+color: white;
+    }
+
+    .about h3{
+        padding: 10px;
+        margin: 10px;
+        color:#21D4FD;
+       font-family: cursive;
+       font-size: 2.5rem;
+    }
+    .about p{
+        color: white;
+        font-size: 1.1rem;
+        margin: 10px;
+        
+    }
+    #button{
+        margin-top: 15px;
+    }
+    /* Education */
+    .education{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 30px;
+    }
+    .tenth,.twelth,.college
+    {
+        background-color:white ;
+        height: 170px;
+        width: 65%;
+        /* margin: 30px 250px; */
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+        padding: 6px;
+        border-radius: 20px;
+        transition: all 0.4s;
+    }
+    .tenth:hover,.twelth:hover,.college:hover{
+        border: solid #21D4FD 4px;
+        box-shadow: 3px 3px 5px #21D4FD;
+        transform: scale(1.1);
+    }
+    .tenth li,.twelth li,.college li {
+        font-size: 2rem;
+        list-style-type: square;
+    }
+  
+    .tenth p ,.twelth p,.college p{
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+    .tenth span ,.twelth span,.college span{
+        font-size: 2rem;
+        font-weight: 800;
+        padding: 10px;
+    }
+
