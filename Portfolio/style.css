@@ -98,6 +98,11 @@ font-size: 18px;}
     margin:15px 20px
 }
 } */
+.header .showicon{
+    cursor: pointer;
+    display: none;
+text-align: center;
+font-size: 18px;} 
 .header input[type="checkbox"]{
     display: none;}
     @media(max-width:900px){
@@ -246,30 +251,30 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
     }
     /* about */
     .about img{
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         transition: all 0.3s;
     }
     .about img:hover{
      transform: scale(1.2);
     }
     .about{
-        margin: 20px;
+        margin: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 10px;
         
     }
     .about h1{
-
+margin: 30px;
 font-size: 3rem;
 color: white;
     }
 
-    .about h3{
-    
-      
+    .about h3{  
+      margin: 30px 0 20px 0;
         color:#21D4FD;
        font-family: cursive;
        font-size: 2.5rem;
@@ -336,8 +341,8 @@ color: white;
     text-align: center;
 }
 .skills  img{
- height: 250px;
- width: 250px;
+ height: 150px;
+ width: 150px;
  transition: all 0.4s;
 
 }
@@ -353,5 +358,104 @@ color: white;
         100%{transform: rotate(0deg);}
     }
   .skills img:hover{
-    animation:icons 5s ease ;
+    animation:icons 3s ease ;
   }
+  /* Project */
+  .project{
+    height: 800px;
+  }
+  .project h1{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin: 20px;
+  }
+  .project-rows{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+align-items: center;
+margin-top: 70px;
+
+
+  }
+  .project1 , .project2{
+    height: 450px;
+width: 40%;
+background-color:#4c4c79;
+border-radius: 30px;
+margin-left: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10px;
+padding: 10px;
+  }
+  .project2{
+    position: relative;
+    top: 200px;
+    left: 400px;
+  }
+  .project1{
+    position: relative;
+    bottom: 50px;
+    
+  }
+  .project h2{
+color: #62d8f3;
+margin: 15px;
+font-size: 2rem;
+text-align: center;
+
+  }
+  .project1 img , .project2 img{
+    height: 30%;
+    width: 50%;
+   
+  }
+  .project1 .p1, .project2 .p1{
+   font-size: 1rem; 
+   width: 90%;
+margin-top: 15px;
+text-align: justify;
+  }
+  .project1 .p2 , .project2 .p2{
+    font-size: 1.5rem;
+    width: 90%;
+    margin-top: 15px;
+ color:#21D4FD
+  }
+.project1 .p1 span{
+    color: black;
+}
+.project1 a, .project2 a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 10px;
+    padding: 10px;
+}
+@keyframes project2{
+    from{
+        top:200px;
+        left:400px;
+    }
+    to{
+        top: 90px;
+        left: 100px;
+    }
+}
+@keyframes project1{
+    from{
+top:0px;
+left: 0px;
+    }
+    to{
+top:100px;
+left: 300px;
+    }
+}
+.project1{
+animation: project1 5s ease  1s infinite ;}
+.project2{
+ animation: project2 5s  ease 1s infinite; 
+}
