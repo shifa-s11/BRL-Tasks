@@ -2,10 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+   
    
 }
 body{
     background-color:rgba(16, 22, 48, 255);
+    overflow-x: hidden;
+    border: solid red 4px;
 }
     
 
@@ -29,6 +33,18 @@ body{
     font-weight: 700;
     text-decoration: none;
 }
+/* @media(max-width:900px){
+    .home{
+      grid-template-columns: 1fr;
+    }
+    .home h1{
+        font-size: 2rem;
+    } */
+.navbar{
+display: flex;
+}
+    
+
 .navbar .links{
     display: flex;
     justify-content: space-between;
@@ -101,9 +117,9 @@ header input[type="checkbox"]{
 }
  
     /* about */
-    header #showmenu:checked #bts{
-        visibility: hidden;
-    }
+    /* header #showmenu:checked #bts{
+        visibility: hidden; */
+    
     .home{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -137,9 +153,10 @@ header input[type="checkbox"]{
         font-size: 1.1rem;
         color: white;
         height: 100px;
-        width: 550px;
+        /* width: 550px; */
         margin: 2rem 0 2rem;
         padding: 15px;
+        text-align: justify;
     }
 
     .button-box{
@@ -220,6 +237,12 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
         height: 300px;
         transition: all 0.3s;
     }
+    @media(max-width:900px){
+        .about img{
+            height: 200px;
+            width: 200px;
+        }
+    }
     .about img:hover{
      transform: scale(1.2);
     }
@@ -252,6 +275,55 @@ color: white;
     }
     #button{
         margin-top: 15px;
+    }
+     @media(max-width:900px){
+        .home{
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+        .homeimg img{
+            height:300px;
+            width:300px;
+            margin-left: 10px;
+        }
+        .head{
+            margin-left: 30px;
+        }
+       
+        .head h1{
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            margin-left: 10px;
+            gap: 5px;
+        }
+        .head h2{
+            font-size: 1.4rem;
+            margin-left: 15px;
+           
+        }
+        .head p{
+          font-size: 1rem;
+          height: auto;
+          width: 250px;
+          margin: 5px 0px;
+        }
+      #bts {
+        height: 3rem;
+        width: 15rem;
+        margin-top: 30px;
+        margin-left: 15px;
+        gap: 10px;
+      }
+      #bts a{
+        font-size: 0.9rem;
+      }
+        /* .head p{width: 300px;
+        height: 200px;
+   text-align: center;} */
+   /* .button-box .button{
+width: 7rem;
+   } */
     }
     /* Education */
     .education h1{
@@ -296,6 +368,13 @@ color: white;
         font-weight: 800;
         padding: 10px;
     }
+    @media(max-width:900px){
+        .education span{font-size: 1rem;}
+    }
+    @media(max-width:600px){
+        .education p{font-size: 1rem;}
+        .education li{font-size: 1.3rem;}
+    }
 
 /* skills */
 .ski h1{
@@ -324,6 +403,14 @@ color: white;
     }
   .skills img:hover{
     animation:icons 3s ease ;
+  }
+  @media(max-width:900px){
+   .skills{flex-wrap: wrap;
+gap: 20px;}
+   .skills img{
+   height: 70px;
+   width:70px;
+   }
   }
   /* Project */
   .project{
@@ -424,6 +511,46 @@ animation: project1 5s ease  1s infinite ;}
 .project2{
  animation: project2 5s  ease 1s infinite; 
 }
+@media(max-width:900px){
+    .project1,.project2{
+        animation-duration: 0s;
+    }
+    .project-rows{
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .project2{
+        top:0px;
+        left: 0;
+        height: auto;
+        width: 70%;
+    }
+    .project1{
+        top: 0; 
+        height: auto;
+        width: 70%;
+        margin: 20px;
+    }
+    .project h2{
+        font-size: 1.2rem;
+    }
+    .project .p2{
+        font-size: 1.2rem;
+    }
+}
+    
+
 /* contact */
 .contact h3{
     font-size:3.5rem;
@@ -452,6 +579,16 @@ form input{
     margin: 15px;
     cursor: pointer;
 }
+@media(max-width:800px){
+    form textarea { 
+        height: 110px;
+        width:100px ;
+    }
+    form .btn{
+        height: 30px;
+        width: 150px;
+    }
+}
 .footer{
     height: 50px;
     width: 100%;
@@ -460,7 +597,7 @@ form input{
     align-items: center;
     background-color: #0c1021;
     gap: 30px;
-    margin: 10px;
+  
 }
 
 
